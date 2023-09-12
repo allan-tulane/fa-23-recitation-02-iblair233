@@ -18,10 +18,10 @@ def simple_work_calc(n, a, b):
 	Returns: the value of W(n).
 	"""
 	# TODO
-  if n <= 1:
-    return 1
-  else:
-    return a*simple_work_calc(n/b,a,b)+n
+	if n <= 1:
+		return 1
+	else:
+		return a*simple_work_calc(n/b,a,b)+n
 
 def work_calc(n, a, b, f):
 	"""Compute the value of the recurrence $W(n) = aW(n/b) + f(n)
@@ -36,10 +36,10 @@ def work_calc(n, a, b, f):
 	Returns: the value of W(n).
 	"""
 	# TODO
-  if(n<=1):
-    return 1
-  else:
-    return a*work_calc(n/b,a,b,f)+f(n)
+	if(n<=1):
+		return 1
+	else:
+		return a*work_calc(n/b,a,b,f)+f(n)
 	pass
 
 def span_calc(n, a, b, f):
@@ -55,10 +55,10 @@ def span_calc(n, a, b, f):
 	Returns: the value of W(n).
 	"""
 	# TODO
-  if(n<=1):
-    return 1
-  else:
-    return a*work_calc(n/b,a,b,f)+f(n)
+	if(n<=1):
+		return 1
+	else:
+		return a*work_calc(n/b,a,b,f)+f(n)
 	pass
 
 
@@ -96,23 +96,23 @@ def test_compare_work():
     
 	# create work_fn1
 	# create work_fn2
-  def work_fn1(n):
-    return work_calc(n, 64, 2, lambda n: math.pow(n,2.0))
-  def work_fn2(n):
-    return work_calc(n, 64, 2, lambda n: math.pow(n,10.0))
-  def work_fn3(n):
-    return work_calc(n, 64, 2, lambda n: math.pow(n,6.0))
-    res = compare_work(work_fn1, work_fn2)
+	def work_fn1(n):
+		return work_calc(n, 64, 2, lambda n: math.pow(n,2.0))
+	def work_fn2(n):
+		return work_calc(n, 64, 2, lambda n: math.pow(n,10.0))
+	def work_fn3(n):
+		return work_calc(n, 64, 2, lambda n: math.pow(n,6.0))
+	res = compare_work(work_fn1, work_fn2)
 	print(res)
 
 def test_compare_span():
 	# TODO
-  def span_fn1(n):
-    return span_calc(n, 64, 2, lambda n: math.pow(n,2.0))
-  def span_fn2(n):
-    return span_calc(n, 64, 2, lambda n: math.pow(n,10.0))
-  def span_fn3(n):
-    return span_calc(n, 64, 2, lambda n: math.pow(n,6.0))
-  res = compare_span(span_fn1, span_fn2)
-  print(res)
+	def span_fn1(n):
+		return span_calc(n, 64, 2, lambda n: math.pow(n,2.0))
+	def span_fn2(n):
+		return span_calc(n, 64, 2, lambda n: math.pow(n,10.0))
+	def span_fn3(n):
+		return span_calc(n, 64, 2, lambda n: math.pow(n,6.0))
+	res = compare_span(span_fn1, span_fn2)
+	print(res)
 
