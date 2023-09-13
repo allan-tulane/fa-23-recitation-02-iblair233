@@ -73,7 +73,7 @@ def compare_work(work_fn1, work_fn2, sizes=[10, 20, 50, 100, 1000, 5000, 10000])
 	
 	"""
 	result = []
-	for n in input_sizes:
+	for n in sizes:
 		# compute W(n) using current a, b, f
 		result.append((
 			n,
