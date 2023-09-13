@@ -19,7 +19,7 @@ def simple_work_calc(n, a, b):
 	Returns: the value of W(n).
 	"""
 	# TODO
-	if (n <= 1):
+	 if (n <= 1):
 		return 1
 	else:
 		return a*simple_work_calc(n/b,a,b)+n
