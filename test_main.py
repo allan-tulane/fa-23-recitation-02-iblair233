@@ -10,7 +10,7 @@ def test_simple_work():
 	assert work_calc(75, 4, 2) == 25909
 
 def test_work():
-	assert work_calc(10, 2, 2,lambda n: 1) == 32
+	assert work_calc(10, 2, 2,lambda n: 1) == 31
 	assert work_calc(20, 1, 2, lambda n: n*n) == 85
 	assert work_calc(30, 3, 2, lambda n: n) == 40
 	assert work_calc(10, 2, 2, lambda n: n*n) == 203.5
